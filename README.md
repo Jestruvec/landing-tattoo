@@ -41,23 +41,20 @@ El sitio está diseñado con una estética oscura, elegante y minimalista, e inc
 
 ## Estructura de carpetas (resumen)
 
-.
-├── src
-├── assets # Imágenes, íconos y otros recursos estáticos
-├── styles # Configuraciones de Tailwind y estilos globales
-├── main.ts # Scripts para interacción, animaciones y menú móvil
-└── index.html # Estructura principal del sitio
+- `/src`
+- `/assets` → Imágenes, íconos, recursos estáticos
+- `/styles` → Configuraciones de Tailwind y estilos personalizados
+- `main.ts` → Lógica de interacción, animaciones y menú móvil
+- `index.html` → Estructura principal del sitio
 
 ---
 
 ## Cómo ejecutar el proyecto
 
-$ git clone https://github.com/tu-usuario/landing-tattoo.git
-$ cd landing-tattoo
-$ npm install # o yarn
-$ npm run dev # o yarn dev
-
-Abre tu navegador en: http://localhost:5173
+1. Clona el repositorio
+2. Instala dependencias con `npm install` o `yarn`
+3. Ejecuta el servidor local con `npm run dev` o `yarn dev`
+4. Abre `http://localhost:5173` en tu navegador
 
 ---
 
@@ -72,8 +69,7 @@ Abre tu navegador en: http://localhost:5173
 
 ## Contacto
 
-¿Tienes dudas o sugerencias?
-Escríbeme a: jhonnyestruve@darkmatter-studio.com
+¿Tienes dudas o sugerencias? Escríbeme a [jhonnyestruve@darkmatter-studio.com](mailto:jhonnyestruve@darkmatter-studio.com)
 
 ---
 
@@ -81,6 +77,4 @@ Escríbeme a: jhonnyestruve@darkmatter-studio.com
 
 landing-tattoo · darkmatter-studio · vite · tailwindcss · typescript · gsap
 
-```
-
-```
+---

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackNeedle</title>
+    <script type="module" crossorigin src="/landing-tattoo/assets/index-CAYpGiPm.js"></script>
+    <link rel="stylesheet" crossorigin href="/landing-tattoo/assets/index-CGLOPCHy.css">
+  </head>
+  <body class="scroll-smooth text-white bg-[#111]">
+    <header class="fixed w-full shadow z-50 bg-[#111]">
+      <nav
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-bold">BlackNeedle</a>
+
+        <!-- Botón hamburger -->
+        <button
+          id="menuBtn"
+          class="md:hidden p-2 rounded hover:bg-[#222] focus:outline-none focus:ring"
+          aria-label="Abrir menú"
+        >
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+        <!-- Menú normal -->
+        <ul id="navMenu" class="hidden md:flex gap-6 font-semibold">
+          <li>
+            <a href="#hero" class="hover:text-gray-300">
+              <i data-lucide="home" class="inline w-5 h-5 mr-1"></i>Inicio
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="hover:text-gray-300">
+              <i data-lucide="badge-info" class="inline w-5 h-5 mr-1"></i
+              >Nosotros
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" class="hover:text-gray-300">
+              <i data-lucide="image" class="inline w-5 h-5 mr-1"></i>Galería
+            </a>
+          </li>
+          <li>
+            <a href="#process" class="hover:text-gray-300">
+              <i data-lucide="layers" class="inline w-5 h-5 mr-1"></i>Proceso
+            </a>
+          </li>
+          <li>
+            <a href="#reviews" class="hover:text-gray-300">
+              <i data-lucide="star" class="inline w-5 h-5 mr-1"></i>Opiniones
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-gray-300">
+              <i data-lucide="mail" class="inline w-5 h-5 mr-1"></i>Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Menú lateral móvil -->
+      <div
+        id="mobileMenu"
+        class="fixed top-0 left-0 h-full w-64 bg-[#111] shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out z-50"
+      >
+        <button
+          id="closeMenuBtn"
+          class="p-4 focus:outline-none"
+          aria-label="Cerrar menú"
+        >
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+        <ul class="flex flex-col gap-6 p-6 text-lg font-semibold">
+          <li>
+            <a
+              href="#hero"
+              onclick="closeMobileMenu()"
+              class="hover:text-gray-300"
+            >
+              <i data-lucide="home" class="inline w-6 h-6 mr-2"></i>Inicio
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              onclick="closeMobileMenu()"
+              class="hover:text-gray-300"
+            >
+              <i data-lucide="badge-info" class="inline w-6 h-6 mr-2"></i
+              >Nosotros
+            </a>
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              onclick="closeMobileMenu()"
+              class="hover:text-gray-300"
+            >
+              <i data-lucide="image" class="inline w-6 h-6 mr-2"></i>Galería
+            </a>
+          </li>
+          <li>
+            <a
+              href="#process"
+              onclick="closeMobileMenu()"
+              class="hover:text-gray-300"
+            >
+              <i data-lucide="layers" class="inline w-6 h-6 mr-2"></i>Proceso
+            </a>
+          </li>
+          <li>
+            <a
+              href="#reviews"
+              onclick="closeMobileMenu()"
+              class="hover:text-gray-300"
+            >
+              <i data-lucide="star" class="inline w-6 h-6 mr-2"></i>Opiniones
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              onclick="closeMobileMenu()"
+              class="hover:text-gray-300"
+            >
+              <i data-lucide="mail" class="inline w-6 h-6 mr-2"></i>Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+    >
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="hidden sm:block absolute w-full h-full object-cover object-center z-0"
+      >
+        <source src="/landing-tattoo/assets/tattoo-background-DqV1pM4p.mp4" type="video/mp4" />
+      </video>
+
+      <div
+        class="absolute inset-0 sm:hidden bg-[url('/src/assets/tattoo-fallback.webp')] bg-cover bg-center z-0"
+      ></div>
+
+      <div class="text-center max-w-2xl px-4 relative z-10 text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Arte permanente, identidad única
+        </h1>
+        <p class="text-lg mb-6">
+          Tatuajes con estilo, técnica y alma. Crea una obra que hable por ti.
+        </p>
+        <a
+          href="#contact"
+          class="bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-gray-700 transition font-semibold"
+        >
+          Agenda tu cita
+        </a>
+      </div>
+
+      <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4">Sobre Nosotros</h2>
+          <p class="text-lg">
+            Más que tinta en la piel, somos una casa de arte permanente.
+            Diseñamos piezas únicas que reflejan tu historia, estilo y esencia.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="md:w-1/2">
+            <img
+              src="/landing-tattoo/assets/tattoo-studio-interior-CgcVsTcs.webp"
+              alt="Interior del estudio de tatuajes"
+              class="w-full h-80 object-cover rounded-lg"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-semibold mb-4">Nuestra Filosofía</h3>
+            <p class="leading-relaxed mb-4">
+              Cada tatuaje es un compromiso con el arte y con tu historia.
+              Creemos en la expresión personal, el diseño exclusivo y la técnica
+              impecable.
+            </p>
+            <p class="leading-relaxed">
+              Utilizamos materiales de la más alta calidad y mantenemos
+              estándares estrictos de higiene. Ya sea tu primer tatuaje o el
+              próximo de muchos, nos tomamos el tiempo de entender tu idea y
+              llevarla al siguiente nivel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center mb-10">
+          Galería de Tatuajes
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl group"
+          >
+            <img
+              src="/landing-tattoo/assets/gallery-1-0noXT2EH.webp"
+              alt="Tatuaje en estilo blackwork"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl group"
+          >
+            <img
+              src="/landing-tattoo/assets/gallery-2-DaulJdvj.webp"
+              alt="Tatuaje realista en brazo"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl group"
+          >
+            <img
+              src="/landing-tattoo/assets/gallery-3-CVufWQRG.webp"
+              alt="Tatuaje en espalda con estilo geométrico"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl group"
+          >
+            <img
+              src="/landing-tattoo/assets/gallery-4-0SNN4_iy.webp"
+              alt="Detalle de tatuaje minimalista"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl group"
+          >
+            <img
+              src="/landing-tattoo/assets/gallery-5-BcSseEcG.webp"
+              alt="Tatuaje a color en estilo neo tradicional"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-lg shadow-md hover:shadow-xl group"
+          >
+            <img
+              src="/landing-tattoo/assets/gallery-6-9cr5Gt32.webp"
+              alt="Proceso de tatuado en estudio"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso Section -->
+    <section id="process" class="py-20">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4">Nuestro Proceso</h2>
+          <p class="text-lg">
+            Cada tatuaje comienza con una historia. Te acompañamos paso a paso
+            para transformar tu idea en arte permanente.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <!-- Paso 1 -->
+          <div class="bg-[#222] hover:bg-[#333] rounded-lg p-6 transition">
+            <div class="mb-4">
+              <i data-lucide="message-square" class="w-10 h-10 mx-auto"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">1. Consulta</h3>
+            <p>
+              Hablamos sobre tu idea, estilo, ubicación del tatuaje y resolvemos
+              tus dudas.
+            </p>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="bg-[#222] hover:bg-[#333] rounded-lg p-6 transition">
+            <div class="mb-4">
+              <i data-lucide="pen-tool" class="w-10 h-10 mx-auto"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">2. Diseño</h3>
+            <p>
+              Creamos un diseño personalizado según tus gustos y referencias.
+            </p>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="bg-[#222] hover:bg-[#333] rounded-lg p-6 transition">
+            <div class="mb-4">
+              <i data-lucide="feather" class="w-10 h-10 mx-auto"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">3. Tatuado</h3>
+            <p>
+              Aplicamos la tinta con precisión, cuidado y cumpliendo con los más
+              altos estándares de higiene.
+            </p>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="bg-[#222] hover:bg-[#333] rounded-lg p-6 transition">
+            <div class="mb-4">
+              <i data-lucide="heart" class="w-10 h-10 mx-auto"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">4. Cuidados</h3>
+            <p>
+              Te explicamos cómo cuidar tu tatuaje y te damos recomendaciones
+              para su curación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2
+          class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-12"
+        >
+          Historias bajo la piel
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Testimonio 1 -->
+          <div
+            class="bg-[#222] hover:bg-[#333] flex flex-col justify-between rounded-lg p-6 transition"
+          >
+            <p class="text-gray-700 dark:text-gray-300 mb-4 italic">
+              “Mi primer tatuaje y no pude elegir mejor. Me explicaron todo el
+              proceso y el resultado fue increíble.”
+            </p>
+            <div>
+              <div class="flex items-center space-x-4 mb-4">
+                <div class="flex text-yellow-400">
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <img
+                  src="/landing-tattoo/assets/client-1-CnP0f_26.webp"
+                  alt="Cliente 1"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-white">
+                    Andrea Ruiz
+                  </p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Tatuaje floral
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div
+            class="bg-[#222] hover:bg-[#333] flex flex-col justify-between rounded-lg p-6 transition"
+          >
+            <p class="text-gray-700 dark:text-gray-300 mb-4 italic">
+              “El detalle en la línea es brutal. Profesionalismo total y
+              ambiente súper relajado.”
+            </p>
+            <div>
+              <div class="flex items-center space-x-4 mb-4">
+                <div class="flex text-yellow-400">
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <img
+                  src="/landing-tattoo/assets/client-2-D8DbjCLl.webp"
+                  alt="Cliente 2"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-white">
+                    Luis Herrera
+                  </p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Tatuaje en brazo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div
+            class="bg-[#222] hover:bg-[#333] flex flex-col justify-between rounded-lg p-6 transition"
+          >
+            <p class="text-gray-700 dark:text-gray-300 mb-4 italic">
+              “Volvería mil veces. Me ayudaron a plasmar una idea muy personal y
+              el resultado me emocionó.”
+            </p>
+            <div>
+              <div class="flex items-center space-x-4 mb-4">
+                <div class="flex text-yellow-400">
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                  <i data-lucide="star" class="w-5 h-5"></i>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <img
+                  src="/landing-tattoo/assets/client-3-D4ZRfHBw.webp"
+                  alt="Cliente 3"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-white">
+                    Natalia Gómez
+                  </p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Tatuaje conmemorativo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center mb-10">
+          ¿Dónde nos encontramos?
+        </h2>
+
+        <div class="flex flex-col md:flex-row md:items-stretch gap-8">
+          <!-- Mapa -->
+          <div
+            class="w-full md:w-2/3 h-80 rounded-xl overflow-hidden shadow-lg"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.595645799077!2d-99.17362718468902!3d19.432607286884207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b7793777b%3A0x5f3746e49c08d0b5!2sCiudad%20de%20México!5e0!3m2!1ses!2smx!4v1615792618445!5m2!1ses!2smx"
+              width="100%"
+              height="100%"
+              allowfullscreen=""
+              loading="lazy"
+              class="border-0 w-full h-full"
+            ></iframe>
+          </div>
+
+          <!-- Información -->
+          <div
+            class="w-full md:w-1/3 flex flex-col justify-center text-center md:text-left"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Dark Matter Studio</h3>
+            <p class="mb-3">
+              📍 Av. de los Tatuajes #666<br />
+              Col. Arte y Tinta, CDMX, México
+            </p>
+            <p class="mb-3">
+              🕐 Horarios:<br />
+              Lunes a Sábado —
+              <span class="font-medium">11:00 AM a 8:00 PM</span>
+            </p>
+            <p class="mb-3">Solo con cita previa.</p>
+            <a
+              href="https://www.google.com/maps/place/Ciudad+de+México/"
+              target="_blank"
+              class="inline-block mt-4 px-6 py-3 bg-[#222] font-medium rounded-lg hover:bg-[#333] transition-colors duration-300"
+            >
+              Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-3xl font-bold text-center mb-10">Agenda tu cita</h2>
+
+        <form
+          class="p-8 rounded-lg shadow-lg space-y-6"
+          onsubmit="event.preventDefault(); alert('Formulario enviado!');"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block font-medium mb-1"
+                >Nombre completo</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ej. Ana Martínez"
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block font-medium mb-1"
+                >Teléfono / WhatsApp</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+52 55 1234 5678"
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="date" class="block font-medium mb-1 text-white"
+                >Fecha</label
+              >
+              <input
+                type="date"
+                id="date"
+                name="date"
+                class="w-full text-black border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white filter invert"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="time" class="block font-medium mb-1 text-white"
+                >Hora</label
+              >
+              <input
+                type="time"
+                id="time"
+                name="time"
+                class="w-full text-black border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white filter invert"
+                required
+              />
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="design" class="block font-medium mb-1"
+                >Tipo de diseño / área</label
+              >
+              <input
+                type="text"
+                id="design"
+                name="design"
+                placeholder="Ej. Tatuaje floral en brazo"
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+                required
+              />
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="notes" class="block font-medium mb-1"
+                >Comentarios adicionales</label
+              >
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Ej. Preferencias, alergias, o dudas"
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-[#222] text-white px-8 py-3 rounded-lg font-medium cursor-pointer hover:bg-[#333] transition"
+            >
+              Enviar cita
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer" class="mt-20">
+      <div
+        class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8"
+      >
+        <!-- Logo y descripción -->
+        <div>
+          <a href="#" class="text-3xl font-bold mb-4 inline-block">
+            Dark Matter Studio
+          </a>
+          <p class="max-w-xs">
+            Estudio de tatuajes con pasión por el arte corporal, la creatividad
+            y la expresión única. Síguenos para conocer nuestros trabajos y
+            promociones exclusivas.
+          </p>
+        </div>
+
+        <!-- Navegación rápida -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Navegación</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#hero" class="hover:text-gray-300 transition">Inicio</a>
+            </li>
+            <li>
+              <a href="#about" class="hover:text-gray-300 transition"
+                >Nosotros</a
+              >
+            </li>
+            <li>
+              <a href="#galery" class="hover:text-gray-300 transition"
+                >Galería</a
+              >
+            </li>
+            <li>
+              <a href="#process" class="hover:text-gray-300 transition"
+                >Proceso</a
+              >
+            </li>
+            <li>
+              <a href="#reviews" class="hover:text-gray-300 transition"
+                >Opiniones</a
+              >
+            </li>
+            <li>
+              <a href="#location" class="hover:text-gray-300 transition"
+                >Ubicación</a
+              >
+            </li>
+            <li>
+              <a href="#schedule" class="hover:text-gray-300 transition"
+                >Agenda tu cita</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contacto y redes sociales -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contáctanos</h3>
+          <p class="mb-4">
+            Av. de los Tatuajes #666, Col. Arte y Tinta, CDMX, México
+          </p>
+          <p class="mb-4">
+            Tel:
+            <a href="tel:+525512345678" class="hover:text-gray-300 transition"
+              >+52 55 1234 5678</a
+            >
+          </p>
+          <p class="mb-4">
+            Email:
+            <a
+              href="mailto:contacto@darkmatterstudio.com"
+              class="hover:text-gray-300 transition"
+              >contacto@darkmatterstudio.com</a
+            >
+          </p>
+
+          <div class="flex space-x-4 mt-4">
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="hover:text-gray-300 transition"
+            >
+              <i data-lucide="facebook" class="w-6 h-6"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="hover:text-gray-300 transition"
+            >
+              <i data-lucide="instagram" class="w-6 h-6"></i>
+            </a>
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="hover:text-gray-300 transition"
+            >
+              <i data-lucide="twitter" class="w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center text-sm">
+        &copy; 2025 Dark Matter Studio. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-4 right-20 bg-[#222] px-4 py-2 rounded-full shadow-lg hover:bg-[#333] cursor-pointer hidden z-50"
+    >
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      href="https://wa.me/5211234567890"
+      class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg z-40"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chatea con nosotros por WhatsApp"
+    >
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+  </body>
+</html>
